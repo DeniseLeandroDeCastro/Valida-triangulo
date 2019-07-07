@@ -1,0 +1,82 @@
+unit validacao;
+
+interface
+type
+  TQualTriangulo = class
+  public
+    function  ValidaTrianguloEscaleno(ladoA , LadoB, LadoC: Integer ): string;
+    function  ValidaTrianguloIsosceles(ladoA , LadoB, LadoC: Integer ): string;
+    function  ValidaTrianguloEquilatero(ladoA , LadoB, LadoC: Integer ): string;
+    function  TrianguloValido(ladoA , LadoB, LadoC: Integer ): string;
+
+  end;
+
+implementation
+
+{ TQualTriangulo }
+
+function TQualTriangulo.TrianguloValido(ladoA, LadoB, LadoC: Integer): string;
+begin
+if ((ladoA + LadoB) > LadoC) or ((ladoA + LadoC) > LadoB) or ((LadoB + LadoC)> ladoA)  then
+  begin
+      Result := 'É um Triangulo';
+  end
+  else
+  begin
+    Result := 'Não é um Triangulo';
+  end;
+end;
+
+function TQualTriangulo.ValidaTrianguloEquilatero(ladoA, LadoB, //fazer teste
+  LadoC: Integer): string;
+begin
+  if ((ladoA + LadoB) > LadoC) or ((ladoA + LadoC) > LadoB) or ((LadoB + LadoC)> ladoA)  then
+  begin
+      if (ladoA = LadoB) and (ladoA = LadoC) then
+      begin
+        Result := 'Triangulo Equilatero';
+      end;
+  end
+  else
+  begin
+    Result := 'Não é um Triangulo';
+  end;
+end;
+
+function TQualTriangulo.ValidaTrianguloEscaleno(ladoA, LadoB, //fazer testes
+  LadoC: Integer): string;
+begin
+  if ((ladoA + LadoB) > LadoC) or ((ladoA + LadoC) > LadoB) or ((LadoB + LadoC)> ladoA)  then
+  begin
+      if (ladoA <> LadoB) and (ladoA <> LadoC) then
+      begin
+        Result := 'Triangulo Escaleno';
+      end;
+  end
+  else
+  begin
+    Result := 'Não é um Triangulo';
+  end;
+end;
+
+function TQualTriangulo.ValidaTrianguloIsosceles(ladoA, LadoB, //Resolvido
+  LadoC: Integer): string;
+begin
+  if ((ladoA + LadoB) > LadoC) or ((ladoA + LadoC) > LadoB) or ((LadoB + LadoC)> ladoA)  then
+  begin
+      if ((ladoA = LadoB) and (ladoA <> LadoC)) or  ((LadoC = LadoB) and (LadoC <> ladoA)) or ((ladoA = LadoC) and (ladoA <> ladoB)) then
+      begin
+        Result := 'Triangulo Isosceles';
+      end;
+  end
+  else
+  begin
+    Result := 'Não é um Triangulo';
+  end;
+end;
+
+end.
+
+
+
+//Beatriz Alves e Denise Maria

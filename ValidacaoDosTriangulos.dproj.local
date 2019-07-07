@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/04/02 15:45:28.000.056,=C:\Users\beatriz\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2019/04/02 15:45:50.000.942,=C:\Users\beatriz\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2019/04/02 15:46:39.000.685,C:\Users\beatriz\Documents\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\beatriz\CONTEÚDOS_DIDÁTICOS\IFRN\2019IFRN\Teste e Qualidade de Software\ValidaTriangulo\validacao.pas</Transaction>
+    <Transaction>2019/04/02 15:46:55.000.422,C:\Users\beatriz\Documents\Embarcadero\Studio\Projects\Unit3.dfm=C:\Users\beatriz\CONTEÚDOS_DIDÁTICOS\IFRN\2019IFRN\Teste e Qualidade de Software\ValidaTriangulo\ValidaForm.dfm</Transaction>
+    <Transaction>2019/04/02 15:46:55.000.422,C:\Users\beatriz\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\beatriz\CONTEÚDOS_DIDÁTICOS\IFRN\2019IFRN\Teste e Qualidade de Software\ValidaTriangulo\ValidaForm.pas</Transaction>
+    <Transaction>2019/04/02 15:47:10.000.866,C:\Users\beatriz\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\beatriz\CONTEÚDOS_DIDÁTICOS\IFRN\2019IFRN\Teste e Qualidade de Software\ValidaTriangulo\ValidacaoDosTriangulos.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

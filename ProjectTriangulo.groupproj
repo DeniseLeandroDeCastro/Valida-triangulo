@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BE99DA2C-6F17-48EE-BC01-A0461DBFD0E3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ValidacaoDosTriangulos.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\ValidacaoDosTriangulosTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ValidacaoDosTriangulos">
+        <MSBuild Projects="ValidacaoDosTriangulos.dproj"/>
+    </Target>
+    <Target Name="ValidacaoDosTriangulos:Clean">
+        <MSBuild Projects="ValidacaoDosTriangulos.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ValidacaoDosTriangulos:Make">
+        <MSBuild Projects="ValidacaoDosTriangulos.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ValidacaoDosTriangulosTests">
+        <MSBuild Projects="Test\ValidacaoDosTriangulosTests.dproj"/>
+    </Target>
+    <Target Name="ValidacaoDosTriangulosTests:Clean">
+        <MSBuild Projects="Test\ValidacaoDosTriangulosTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ValidacaoDosTriangulosTests:Make">
+        <MSBuild Projects="Test\ValidacaoDosTriangulosTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ValidacaoDosTriangulos;ValidacaoDosTriangulosTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ValidacaoDosTriangulos:Clean;ValidacaoDosTriangulosTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ValidacaoDosTriangulos:Make;ValidacaoDosTriangulosTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
